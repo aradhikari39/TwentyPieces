@@ -20,7 +20,10 @@ public class Player extends Entity
     KeyHandler KeyH;
     public final int screenX;
     public final int screenY;
-    int hasKey=0;
+    int hasbronze=0;
+    int hassilver=0;
+    int hasgold=0;
+    int hasonepiece=0;
     public Player(Game_panel gb, KeyHandler KeyH)
     {
         this.gp=gb;
@@ -146,22 +149,24 @@ public class Player extends Entity
             switch(objectName)
             {
                 case "Key":
-                    hasKey++;
+                    hasbronze++;
                     gp.obj[i]=null;
-                    System.out.println("Key: "+ hasKey);
+                    System.out.println("Bronze Treasure: "+ hasbronze);
                     break; 
                 case "Door":
-                    if(hasKey>0)
-                    {
-                        gp.obj[i]=null;
-                        hasKey--;
-                    }
-                    System.out.println("Key: "+ hasKey);
+                    gp.obj[i]=null;
+                    hassilver++;
+                    System.out.println("Silver Treasure: "+ hassilver);
                     break;
                 case "Boots":
-                    speed +=2;
                     gp.obj[i]=null;
+                    hasonepiece++;
+                    System.out.println("The One Piece: Attained");
                     break;
+                case "Chest":
+                    hasgold++;
+                    gp.obj[i]=null;
+                    System.out.println("Gold Treasure: "+ hasgold);
 
             }
         }
