@@ -5,9 +5,9 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class OBJ_Boots extends SuperObject  
+public class OBJ_onepiece extends SuperObject  
 {
-    public OBJ_Boots()
+    public OBJ_onepiece()
     {
         name="Boots";
         try{
