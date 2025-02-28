@@ -26,8 +26,8 @@ public class Game_panel extends JPanel implements Runnable
      
 
     //World settings
-    public final int maxWorldCol=50;
-    public final int maxWorldRow=50;
+    public final int maxWorldCol=100;
+    public final int maxWorldRow=100;
     public final int maxWorldWidth=tileSize*maxWorldCol;
     public final int maxWorldHeight=tileSize*maxWorldRow;
     // FPS
@@ -40,7 +40,7 @@ public class Game_panel extends JPanel implements Runnable
     Thread gameThread;
     public CollisonChecker cChecker=new CollisonChecker(this);
     public AssetSetter aSetter=new AssetSetter(this);
-    public SuperObject obj[]=new SuperObject[10];
+    public SuperObject obj[]=new SuperObject[20];
     
 
     public void setUpGame()

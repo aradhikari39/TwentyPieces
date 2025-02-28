@@ -113,6 +113,7 @@ public class CollisonChecker
                             if(player==true)
                             {
                                 index=i;
+                                System.out.println("Player is colliding with: " + gp.obj[i].name);
                             }
                         }
                         break;

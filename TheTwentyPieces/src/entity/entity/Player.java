@@ -10,9 +10,13 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+// import MAIN.AssetSetter;
 import MAIN.Game_panel;
 
 import MAIN.KeyHandler;
+import objects.OBJ_gold;
+import objects.OBJ_onepiece;
+import objects.OBJ_silver;
 
 public class Player extends Entity
 {
@@ -62,8 +66,8 @@ public class Player extends Entity
       
     public void setDefaultValues()
     {
-        worldx=gp.tileSize*23;
-        worldy=gp.tileSize*21;
+        worldx=gp.tileSize*38;
+        worldy=gp.tileSize*89;
         speed=4;
         direction="down";
     }
@@ -148,24 +152,62 @@ public class Player extends Entity
             String objectName=gp.obj[i].name;
             switch(objectName)
             {
-                case "Key":
+                case "bronze":
                     hasbronze++;
                     gp.obj[i]=null;
                     System.out.println("Bronze Treasure: "+ hasbronze);
+                    if (hasbronze ==3 ) 
+                    {
+                        gp.obj[3]=new OBJ_silver();
+                        gp.obj[3].worldx=10*gp.tileSize;
+                        gp.obj[3].worldy=11*gp.tileSize;
+                        System.out.println("The One Piece has appeared!");
+
+                        gp.obj[4]=new OBJ_silver();
+                        gp.obj[4].worldx=8*gp.tileSize;
+                        gp.obj[4].worldy=28*gp.tileSize;
+
+                        gp.obj[5]=new OBJ_silver();
+                        gp.obj[5].worldx=12*gp.tileSize;
+                        gp.obj[5].worldy=22*gp.tileSize;
+
+                        
+                       
+                    }
                     break; 
-                case "Door":
+
+                case "silver":
                     gp.obj[i]=null;
                     hassilver++;
+
+                    if (hassilver == 3 )
+                    { 
+                        gp.obj[6]=new OBJ_gold();
+                        gp.obj[6].worldx=10*gp.tileSize;
+                        gp.obj[6].worldy=7*gp.tileSize;
+                    }
                     System.out.println("Silver Treasure: "+ hassilver);
                     break;
-                case "Boots":
+
+
+                case "onepiece":
+                
                     gp.obj[i]=null;
                     hasonepiece++;
                     System.out.println("The One Piece: Attained");
+                
                     break;
-                case "Chest":
+                case "gold":
                     hasgold++;
                     gp.obj[i]=null;
+                    if (hasgold == 1 )
+                    { 
+
+                        gp.obj[7] = new OBJ_onepiece();
+                        gp.obj[7].worldx = 37 * gp.tileSize;
+                        gp.obj[7].worldy = 42 * gp.tileSize;
+
+                    }
                     System.out.println("Gold Treasure: "+ hasgold);
 
             }

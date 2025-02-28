@@ -9,7 +9,7 @@ public class OBJ_onepiece extends SuperObject
 {
     public OBJ_onepiece()
     {
-        name="Boots";
+        name="onepiece";
         try{
             image= ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/treasure/onepiece.png"));
         }catch(IOException e){e.printStackTrace();}
