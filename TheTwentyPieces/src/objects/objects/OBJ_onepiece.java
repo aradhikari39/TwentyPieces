@@ -11,7 +11,7 @@ public class OBJ_onepiece extends SuperObject
     {
         name="onepiece";
         try{
-            image= ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/treasure/onepiece.png"));
+            image= ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/treasure/onepiece.png"));
         }catch(IOException e){e.printStackTrace();}
 
     }

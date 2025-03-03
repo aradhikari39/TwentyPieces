@@ -24,10 +24,10 @@ public class Player extends Entity
     KeyHandler KeyH;
     public final int screenX;
     public final int screenY;
-    int hasbronze=0;
-    int hassilver=0;
-    int hasgold=0;
-    int hasonepiece=0;
+    public int hasbronze=0;
+    public int hassilver=0;
+    public int hasgold=0;
+    public int hasonepiece=0;
     public Player(Game_panel gb, KeyHandler KeyH)
     {
         this.gp=gb;
@@ -49,14 +49,14 @@ public class Player extends Entity
     }
     public void getPlayerImage() {
         try {
-            up1 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/player/boyup1.png"));
-            up2 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/player/boyup2.png"));
-            down1 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/player/boydown1.png"));
-            down2 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/player/boydown2.png"));
-            right1 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/player/boyright1.png"));
-            right2 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/player/boyright2.png"));
-            left1 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/player/boyleft1.png"));
-            left2 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/player/boyleft2.png"));
+            up1 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/player/boyup1.png"));
+            up2 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/player/boyup2.png"));
+            down1 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/player/boydown1.png"));
+            down2 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/player/boydown2.png"));
+            right1 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/player/boyright1.png"));
+            right2 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/player/boyright2.png"));
+            left1 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/player/boyleft1.png"));
+            left2 = ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/player/boyleft2.png"));
 
 
         } catch (IOException e) {
@@ -68,7 +68,7 @@ public class Player extends Entity
     {
         worldx=gp.tileSize*38;
         worldy=gp.tileSize*89;
-        speed=4;
+        speed=6;
         direction="down";
     }
     public void update()
@@ -156,20 +156,36 @@ public class Player extends Entity
                     hasbronze++;
                     gp.obj[i]=null;
                     System.out.println("Bronze Treasure: "+ hasbronze);
-                    if (hasbronze ==3 ) 
+                    gp.ui.showmessage("You found a Bronze!!!");
+                    if (hasbronze ==10 ) 
                     {
-                        gp.obj[3]=new OBJ_silver();
-                        gp.obj[3].worldx=10*gp.tileSize;
-                        gp.obj[3].worldy=11*gp.tileSize;
-                        System.out.println("The One Piece has appeared!");
+                        
 
-                        gp.obj[4]=new OBJ_silver();
-                        gp.obj[4].worldx=8*gp.tileSize;
-                        gp.obj[4].worldy=28*gp.tileSize;
 
-                        gp.obj[5]=new OBJ_silver();
-                        gp.obj[5].worldx=12*gp.tileSize;
-                        gp.obj[5].worldy=22*gp.tileSize;
+                        System.out.println("5 silver Coins have been scattered, grab it!!!!");
+                        gp.ui.showmessage("5 silver Coins have been scattered, grab it!!!!");
+                        gp.obj[10]=new OBJ_silver();
+                        gp.obj[10].worldx=6*gp.tileSize;
+                        gp.obj[10].worldy=1*gp.tileSize;
+                        
+
+                        gp.obj[11]=new OBJ_silver();
+                        gp.obj[11].worldx=44*gp.tileSize;
+                        gp.obj[11].worldy=24*gp.tileSize;
+
+                        gp.obj[12]=new OBJ_silver();
+                        gp.obj[12].worldx=98*gp.tileSize;
+                        gp.obj[12].worldy=40*gp.tileSize;
+
+                        gp.obj[13]=new OBJ_silver();
+                        gp.obj[13].worldx=7*gp.tileSize;
+                        gp.obj[13].worldy=94*gp.tileSize;
+
+                        gp.obj[14]=new OBJ_silver();
+                        gp.obj[14].worldx=81*gp.tileSize;
+                        gp.obj[14].worldy=57*gp.tileSize;
+
+
 
                         
                        
@@ -180,35 +196,51 @@ public class Player extends Entity
                     gp.obj[i]=null;
                     hassilver++;
 
-                    if (hassilver == 3 )
+                    if (hassilver == 5 )
                     { 
-                        gp.obj[6]=new OBJ_gold();
-                        gp.obj[6].worldx=10*gp.tileSize;
-                        gp.obj[6].worldy=7*gp.tileSize;
+                        
+                        gp.obj[15]=new OBJ_gold();
+                        gp.obj[15].worldx=98*gp.tileSize;
+                        gp.obj[15].worldy=17*gp.tileSize;
+
+                        gp.obj[16]=new OBJ_gold();
+                        gp.obj[16].worldx=30*gp.tileSize;
+                        gp.obj[16].worldy=70*gp.tileSize;
+
+                        gp.obj[17]=new OBJ_gold();
+                        gp.obj[17].worldx=47*gp.tileSize;
+                        gp.obj[17].worldy=2*gp.tileSize;
                     }
                     System.out.println("Silver Treasure: "+ hassilver);
-                    break;
-
-
-                case "onepiece":
-                
-                    gp.obj[i]=null;
-                    hasonepiece++;
-                    System.out.println("The One Piece: Attained");
+                    gp.ui.showmessage("You found a Silver!!!");
+                     
+                    if (hassilver >= 5 )
+                    {
+                        System.out.println("3 Gold treasures have been scattered, Grab it!!!!");
+                        gp.ui.showmessage("3 Gold treasures have been scattered, Grab it!!!!");
+                    }
+                    System.out.println("You found ultimate treasure");
+                    gp.ui.gameFinished=true;
                 
                     break;
                 case "gold":
                     hasgold++;
                     gp.obj[i]=null;
-                    if (hasgold == 1 )
+                    if (hasgold == 3 )
                     { 
-
-                        gp.obj[7] = new OBJ_onepiece();
-                        gp.obj[7].worldx = 37 * gp.tileSize;
-                        gp.obj[7].worldy = 42 * gp.tileSize;
+                        gp.obj[18] = new OBJ_onepiece();
+                        gp.obj[18].worldx = 68 * gp.tileSize;
+                        gp.obj[18].worldy = 12 * gp.tileSize;
 
                     }
                     System.out.println("Gold Treasure: "+ hasgold);
+                    gp.ui.showmessage("You found Gold!!!");
+                    if (hasgold >= 3 )
+                    {
+                        System.out.println("The ULTIMATE TREASURE, has appeared!!!");
+                        gp.ui.showmessage("The ULTIMATE TREASURE, has appeared!!!");
+
+                    }
 
             }
         }

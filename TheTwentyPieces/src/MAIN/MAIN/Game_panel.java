@@ -40,6 +40,7 @@ public class Game_panel extends JPanel implements Runnable
     Thread gameThread;
     public CollisonChecker cChecker=new CollisonChecker(this);
     public AssetSetter aSetter=new AssetSetter(this);
+    public UI ui=new UI(this);
     public SuperObject obj[]=new SuperObject[20];
     
 
@@ -137,6 +138,9 @@ public class Game_panel extends JPanel implements Runnable
         }
         //player
         player.draw(g2);
+
+        //UI
+        ui.draw(g2);
         
         
         

@@ -11,7 +11,7 @@ public class OBJ_gold extends SuperObject
     {
         name="gold";
         try{
-            image= ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/treasure/gold.png"));
+            image= ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/treasure/gold.png"));
         }catch(IOException e){e.printStackTrace();}
 
     }

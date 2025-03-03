@@ -11,7 +11,7 @@ public class OBJ_silver extends SuperObject
     {
         name="silver";
         try{
-            image= ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/res/treasure/silver.png"));
+            image= ImageIO.read(new File("c:/Users/User/Desktop/TwentyPieces/TheTwentyPieces/src/res/treasure/silver.png"));
         }catch(IOException e){e.printStackTrace();}
         collision=true;
     }

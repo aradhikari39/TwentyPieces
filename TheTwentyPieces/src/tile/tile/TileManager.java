@@ -59,53 +59,53 @@ public class TileManager
         tile =new Tile[10];
         getTileImage();    
         mapTileNum =new int[gp.maxWorldCol][gp.maxWorldRow];
-        loadMap("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/maps/map2.txt");
+        loadMap("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/maps/map2.txt");
     }
     public void getTileImage()
     {
         try
         {
             tile[0] = new Tile();
-            tile[0].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/beachrocks.png"));
+            tile[0].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/beachrocks.png"));
             tile[0].collision=true;
 
             tile[1] = new Tile();
-            tile[1].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/cactus.png"));
+            tile[1].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/cactus.png"));
             tile[1].collision=true;
 
             tile[2] = new Tile();
-            tile[2].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/coconut.png"));
+            tile[2].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/coconut.png"));
           
 
             tile[3] = new Tile();
-            tile[3].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/darksand.png"));
+            tile[3].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/darksand.png"));
             tile[3].collision=true;
             
 
             tile[4] = new Tile();
-            tile[4].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/d1.png"));
+            tile[4].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/d1.png"));
             tile[4].collision=true;
            
 
             tile[5] = new Tile();
-            tile[5].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/desertmountain.png"));
+            tile[5].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/desertmountain.png"));
             tile[5].collision=true;
 
             
             tile[6] = new Tile();
-            tile[6].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/d2.png"));
+            tile[6].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/d2.png"));
             tile[6].collision=true;
 
             
             tile[7] = new Tile();
-            tile[7].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/normal.png"));
+            tile[7].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/normal.png"));
 
             tile[8] = new Tile();
-            tile[8].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/normalsand.png"));
+            tile[8].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/normalsand.png"));
 
             
             tile[9] = new Tile();
-            tile[9].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/res/tiles/sinkingsand.png"));
+            tile[9].image = ImageIO.read(new File("C:/Users/user/Desktop/TwentyPieces/TheTwentyPieces/src/res/tiles/sinkingsand.png"));
             tile[9].collision=true;
 
 
