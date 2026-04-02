@@ -1,18 +1,23 @@
-## Getting Started
+# The Twenty Pieces
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+The Twenty Pieces is a small 2D treasure-hunting game built in Java using Swing/AWT.  
+The player explores a tile-based world, collects treasure in stages, and unlocks higher-value treasure until the final item appears.
 
-## Folder Structure
+## Features
 
-The workspace contains two folders by default, where:
+- Tile-based 2D world
+- Camera centered on the player
+- Collision detection for map tiles and objects
+- Progressive treasure system:
+  - 10 Bronze treasures unlock 5 Silver treasures
+  - 5 Silver treasures unlock 3 Gold treasures
+  - 3 Gold treasures unlock the final ultimate treasure
+- Simple in-game timer and UI
+- Packaged `.jar` and `.exe` builds
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Controls
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `W` - Move up
+- `A` - Move left
+- `S` - Move down
+- `D` - Move right
