@@ -1,3 +1,14 @@
+## Built With
+
+This game was built using core Java only, without any external libraries or game engine.
+
+It uses object-oriented programming concepts such as:
+- inheritance through shared classes like `Entity` and `SuperObject`
+- encapsulation by separating the player, UI, collision, tiles, and game loop into different classes
+- polymorphism by handling different treasure objects through a common object type
+
+Rendering, keyboard input, image loading, and collision handling are done using Java's built-in Swing and AWT APIs.
+
 # The Twenty Pieces
 
 The Twenty Pieces is a small 2D treasure-hunting game built in Java using Swing/AWT.  
